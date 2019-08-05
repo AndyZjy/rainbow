@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.module.scss';
 
-export default function Footer() {
+export default () => {
   return (
     <div className={styles.footer}>
       <div className={styles.links}>
@@ -11,11 +11,12 @@ export default function Footer() {
         <a href="#" className={styles.link}>
           隐私
         </a>
-        <a href="#" style={{ marginRight: '0' }} className={styles.link}>
+        <a href="#" className={`${styles.link} ${styles.contract}`}>
           条款
         </a>
       </div>
       <div className={styles.copyright}>阿里巴巴集团 © 2018 版权所有</div>
     </div>
   );
-}
+};
+

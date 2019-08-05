@@ -1,24 +1,34 @@
-.iceAsideCustom {
-  width: 240px;
-  height: 100%;
-  padding-top: 10px;
-  box-shadow: 4px 1px 12px rgba(0, 55, 107, 0.04);
+.iceDesignProAside {
+  &.iceDesignLayoutAside {
+    overflow: hidden;
+    :global {
+      .next-nav,
+      .next-nav-sub-nav-item {
+        background: transparent;
+      }
+      .next-nav.next-normal {
+        border: none;
+      }
+      .next-nav .next-nav-item.next-menu-item {
+        color: white;
+        background: transparent;
+      }
+      .next-nav .next-menu-item-text i {
+        margin-right: 8px;
+        font-weight: 500;
+      }
+      .next-nav .next-menu-sub-menu .next-menu-item {
+        transition: none;
 
-  .iceAsideLogo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    color: #447eff;
-    font-weight: bold;
-    font-size: 36px;
-  }
-
-  :global .next-menu-item-text {
-    color: #666;
-
-    :global .next-nav-icon.next-icon {
-      margin-right: 10px;
+        &.next-selected,
+        &:hover {
+          background: #444;
+          // border-radius: $corner-2;
+        }
+      }
     }
   }
+}
+:global .next-overlay-wrapper .next-nav-icon-placeholder {
+  display: none;
 }

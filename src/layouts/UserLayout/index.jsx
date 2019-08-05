@@ -1,27 +1,19 @@
 import React from 'react';
-import { Grid } from '@alifd/next';
+import Layout from '@icedesign/layout';
 import Footer from './components/Footer';
-import Intro from './components/Intro';
-
 import styles from './index.module.scss';
-
-const { Row, Col } = Grid;
 
 export default function UserLayout(props) {
   return (
-    <div className={styles.container}>
-      <div className={styles.mask} />
-      <Row wrap className={styles.row}>
-        <Col l="12">
-          <Intro />
-        </Col>
-        <Col l="12">
-          <div className={styles.form}>
-            {props.children}
-          </div>
-        </Col>
-      </Row>
+    <Layout className={styles.userLayout}>
+      <div className={styles.header}>
+        <a href="#" className={styles.meta}>
+          <span className={styles.title}>LOGO</span>
+        </a>
+        <p className={styles.desc}>让前端开发简单而友好</p>
+      </div>
+      {props.children}
       <Footer />
-    </div>
+    </Layout>
   );
 }

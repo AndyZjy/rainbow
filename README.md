@@ -1,33 +1,36 @@
-# 项目管理系统
+## 简介
 
-## 技术栈
-- 技术栈为React,使用UI框架为Fusion Design。
+基于React为技术栈,Fusion Design为UI库的一套项目管理系统。
+
+![ice-design-pro](https://img.alicdn.com/tfs/TB1_bulmpOWBuNjy0FiXXXFxVXa-1920-1080.png)
+
+## 技术点
+
+- icedesign
+- react
+- icestore
+- react-router-dom v4
+- axios
+- ice-scripts
+- etc...
 
 ## 使用
 
-- 启动调试服务: `npm start`
-- 构建 dist: `npm run build`
+1. (推荐) GUI 工具使用: 下载 [iceworks](https://alibaba.github.io/ice/#/iceworks)
+2. Cli 命令使用:
 
-## 目录结构
+```bash
+$ npm start      // 启动预览服务器
+$ npm run build  // 构建 dist
+```
 
-- 入口文件: `src/index.jsx`
-- 导航配置: `src/config/menu.js`
-- 路由配置: `src/config/routes.js`
-- 路由入口: `src/router.jsx`
-- 布局文件: `src/layouts`
-- 通用组件: `src/components`
-- 页面文件: `src/pages`
+## 相关文档
 
-## 配色
+- [ICE Design Pro 使用文档](https://github.com/alibaba/ice/wiki#ice-design-pro-%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3)
 
-- 主色：#447eff
-- 功能主色：#5e83fb、#f7da47、#58ca9a、#ee706d
-- 字体颜色：#333、#666
+## 作者信息
 
-## 效果图
+- 姓名：张靖宇
+- Email：15966685680@163.com
 
-![screenshot](https://img.alicdn.com/tfs/TB1OrPDAMHqK1RjSZFgXXa7JXXa-2872-1580.png)
 
-## 作者
-- 张靖宇
-- 15966685680@163.com

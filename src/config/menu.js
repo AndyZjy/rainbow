@@ -4,57 +4,143 @@
 
 const headerMenuConfig = [
   {
-    name: '反馈',
+    name: 'feedback',
     path: 'https://github.com/alibaba/ice',
     external: true,
     newWindow: true,
-    icon: 'email',
+    icon: 'message',
   },
   {
-    name: '帮助',
+    name: 'help',
     path: 'https://alibaba.github.io/ice',
     external: true,
     newWindow: true,
-    icon: 'help',
+    icon: 'bangzhu',
   },
 ];
 
-// ICON 配置： https://ice.alibaba-inc.com/component/foundationsymbol
 const asideMenuConfig = [
   {
-    name: '工作台',
+    name: 'Dashboard',
     path: '/dashboard',
-    icon: 'account',
+    icon: 'home2',
+    children: [
+      {
+        name: 'monitor',
+        path: '/dashboard/monitor',
+      },
+    ],
   },
   {
-    name: '任务表盘',
-    path: '/taskboard',
-    icon: 'clock',
+    name: 'chart',
+    path: '/chart',
+    icon: 'chart',
+    children: [
+      {
+        name: 'basic',
+        path: '/chart/basic',
+      },
+      {
+        name: 'general',
+        path: '/chart/general',
+      },
+    ],
   },
   {
-    name: '任务状态',
-    path: '/task/status',
-    icon: 'calendar',
+    name: '表格页',
+    path: '/table',
+    icon: 'cascades',
+    children: [
+      {
+        name: 'basic',
+        path: '/table/basic',
+        // authority: 'admin',
+      },
+      {
+        name: 'general',
+        path: '/table/general',
+        // authority: 'user',
+      },
+    ],
   },
   {
-    name: '项目列表',
-    path: '/project/list',
-    icon: 'filter',
+    name: '列表页',
+    path: '/list',
+    icon: 'menu',
+    children: [
+      {
+        name: 'basic',
+        path: '/list/basic',
+      },
+      {
+        name: 'general',
+        path: '/list/general',
+      },
+    ],
   },
   {
-    name: '添加项目',
-    path: '/add/project',
-    icon: 'refresh',
+    name: 'profile',
+    path: '/profile',
+    icon: 'content',
+    children: [
+      {
+        name: 'basic',
+        path: '/profile/basic',
+      },
+      {
+        name: 'terms',
+        path: '/profile/general',
+      },
+    ],
   },
   {
-    name: '成员列表',
-    path: '/member/list',
-    icon: 'account',
+    name: 'result',
+    path: '/result',
+    icon: 'question',
+    children: [
+      {
+        name: 'success',
+        path: '/result/success',
+      },
+      {
+        name: 'fail',
+        path: '/result/fail',
+      },
+    ],
   },
   {
-    name: '添加成员',
-    path: '/add/member',
-    icon: 'add',
+    name: 'account',
+    path: '/account',
+    icon: 'yonghu',
+    children: [
+      {
+        name: 'setting',
+        path: '/account/setting',
+      },
+    ],
+  },
+  {
+    name: 'exception',
+    path: '/exception',
+    icon: 'notice',
+    children: [
+      {
+        name: '204',
+        path: '/exception/204',
+      },
+      {
+        name: '403',
+        path: '/exception/403',
+      },
+      {
+        name: '404',
+        path: '/exception/404',
+      },
+      {
+        name: '500',
+        path: '/exception/500',
+      },
+    ],
   },
 ];
 

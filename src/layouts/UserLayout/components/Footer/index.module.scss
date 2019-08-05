@@ -8,20 +8,20 @@
   align-items: center;
   justify-content: center;
 }
-
 .links {
   margin-bottom: 8px;
 }
-
 .link {
   margin-right: 40px;
-  color: #fff !important;
+  color: rgba(0, 0, 0, .45);
   font-size: 13px;
 }
-
 .copyright {
-  color: #fff;
+  color: rgba(0, 0, 0, .45);
   font-size: 13px;
   line-height: 1.5;
   text-align: right;
+}
+.contract {
+  margin-right: 0;
 }

@@ -1,16 +1,26 @@
+import React from 'react';
+
 import UserLayout from '@/layouts/UserLayout';
 import BasicLayout from '@/layouts/BasicLayout';
-import NotFound from '@/pages/NotFound';
 
-import UserLogin from '@/pages/UserLogin';
-import UserRegister from '@/pages/UserRegister';
-import Dashboard from '@/pages/Dashboard';
-import TaskBoard from '@/pages/TaskBoard';
-import TaskStatus from '@/pages/TaskStatus';
-import MemberList from '@/pages/MemberList';
-import AddMember from '@/pages/AddMember';
-import ProjectList from '@/pages/ProjectList';
-import AddProject from '@/pages/AddProject';
+const UserLogin = React.lazy(() => import('@/pages/UserLogin'));
+const UserRegister = React.lazy(() => import('@/pages/UserRegister'));
+const Dashboard = React.lazy(() => import('@/pages/Dashboard'));
+const Charts = React.lazy(() => import('@/pages/Charts'));
+const BasicCharts = React.lazy(() => import('@/pages/BasicCharts'));
+const Terms = React.lazy(() => import('@/pages/Terms'));
+const Result = React.lazy(() => import('@/pages/Result'));
+const BasicList = React.lazy(() => import('@/pages/BasicList'));
+const ProjectList = React.lazy(() => import('@/pages/ProjectList'));
+const BasicTable = React.lazy(() => import('@/pages/BasicTable'));
+const GeneralTable = React.lazy(() => import('@/pages/GeneralTable'));
+const Profile = React.lazy(() => import('@/pages/Profile'));
+const Setting = React.lazy(() => import('@/pages/Setting'));
+const Fail = React.lazy(() => import('@/pages/Fail'));
+const Empty = React.lazy(() => import('@/pages/Empty'));
+const Forbidden = React.lazy(() => import('@/pages/Forbidden'));
+const NotFound = React.lazy(() => import('@/pages/NotFound'));
+const ServerError = React.lazy(() => import('@/pages/ServerError'));
 
 const routerConfig = [
   {
@@ -39,36 +49,72 @@ const routerConfig = [
     component: BasicLayout,
     children: [
       {
-        path: '/dashboard',
+        path: '/dashboard/monitor',
         component: Dashboard,
       },
       {
-        path: '/taskboard',
-        component: TaskBoard,
+        path: '/chart/general',
+        component: Charts,
       },
       {
-        path: '/member/list',
-        component: MemberList,
+        path: '/chart/basic',
+        component: BasicCharts,
       },
       {
-        path: '/add/member',
-        component: AddMember,
+        path: '/list/basic',
+        component: BasicList,
       },
       {
-        path: '/task/status',
-        component: TaskStatus,
-      },
-      {
-        path: '/project/list',
+        path: '/list/general',
         component: ProjectList,
       },
       {
-        path: '/add/project',
-        component: AddProject,
+        path: '/result/success',
+        component: Result,
+      },
+      {
+        path: '/result/fail',
+        component: Fail,
+      },
+      {
+        path: '/table/basic',
+        component: BasicTable,
+      },
+      {
+        path: '/profile/basic',
+        component: Profile,
+      },
+      {
+        path: '/profile/general',
+        component: Terms,
+      },
+      {
+        path: '/table/general',
+        component: GeneralTable,
+      },
+      {
+        path: '/account/setting',
+        component: Setting,
+      },
+      {
+        path: '/exception/500',
+        component: ServerError,
+      },
+      {
+        path: '/exception/403',
+        component: Forbidden,
+      },
+      {
+        path: '/exception/204',
+        component: Empty,
+      },
+      {
+        path: '/exception/404',
+        component: NotFound,
       },
       {
         path: '/',
-        redirect: '/dashboard',
+        redirect: '/dashboard/monitor',
       },
       {
         component: NotFound,
