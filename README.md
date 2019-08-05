@@ -1,4 +1,7 @@
-# ice-project-management-admin
+# 项目管理系统
+
+## 技术栈
+- 技术栈为React,使用UI框架为Fusion Design。
 
 ## 使用
 
@@ -24,3 +27,7 @@
 ## 效果图
 
 ![screenshot](https://img.alicdn.com/tfs/TB1OrPDAMHqK1RjSZFgXXa7JXXa-2872-1580.png)
+
+## 作者
+- 张靖宇
+- 15966685680@163.com
