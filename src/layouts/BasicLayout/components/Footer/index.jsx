@@ -10,7 +10,7 @@ export default function Footer() {
         <Logo />
       </div>
       <div className={styles.copyright}>
-        © 2018 Theme designed by{' '}
+        © 2018 Andy Zhang 浙ICP备18054874号
         <a
           href="https://github.com/alibaba/ice"
           target="_blank"
